@@ -38,7 +38,7 @@ class MLatchPairingOperations {
             $unpair = false;
         }
         
-        if((!$unpair)&&(!$token)){
+        if((!$unpair)&&(!$token)&&empty($_POST['flag'])){
              $mens = get_string('emptytoken','mlatch');
              $host = './view.php?id=' . $cmid;
              redirect($host, $mens);
@@ -123,7 +123,9 @@ class MLatchPairingOperations {
                     if (!empty($dataError)) {
                         $mens = get_string('unpairnotok','mlatch');// 'Error unpairing';
                     } // unpair = off
+                    if(!empty($_POST['flag'])){
                     $mens = get_string('checkbox','mlatch');// 'Please click on the checkbox!'
+                    }
                 }
 
                 $host = './view.php?id=' . $cmid;

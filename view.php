@@ -54,6 +54,7 @@ if ($isPaired) {
     echo $OUTPUT->box(get_string('typeunpairing','mlatch'));
     echo '<center><form method="post" action="pairing.php">
        <input type="hidden" name="sesskey" value="' . $sesskey . '">
+       <input type="hidden" name="flag" value="on">    
        <input type="checkbox" name="unpair">
        <input type="submit" style="font-size: 15px; color:white; background-color: #09d6db" value="'.get_string('unpairmyaccount','mlatch').'">
        <enctype="text/plain">
