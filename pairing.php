@@ -80,8 +80,6 @@ class MLatchPairingOperations {
                     $mens =get_string('alreadypair','mlatch');// 'Account already paired'
                 } else {
 
-                    $dataResponse = $pairResponse->getData();
-
                     // Records the Account Id on the Database
 
                     if (!empty($dataResponse)) {
